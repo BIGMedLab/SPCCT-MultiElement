@@ -78,4 +78,4 @@ The workbook contains 420 rows covering 84 triads and five W settings. The sourc
 
 ## License and citation
 
-No license is provided in this repository. If publishing publicly, add a license only after confirming permission to distribute the dataset and code. Cite the associated research manuscript when available.
+This repository is released under the MIT License. See the LICENSE file for details. Please cite the associated research manuscript when available.
