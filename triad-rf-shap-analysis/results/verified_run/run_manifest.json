@@ -1,0 +1,70 @@
+{
+  "status": "complete",
+  "created_utc": "20261019T180344_064639Z",
+  "input_filename": "triadW_features.xlsx",
+  "input_sha256": "dda379afa625905c3b37df1cc2fcb13ae621d5a7a68c5ef8bed3297a0299caed",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "shap": "0.49.1",
+    "matplotlib": "3.10.8",
+    "openpyxl": "3.1.5"
+  },
+  "scoring": {
+    "W_inclusive": [
+      10,
+      26
+    ],
+    "scaler": "StandardScaler on all filtered rows",
+    "composite_score": "Sequential sum of six z-scores, each weight = 1.0"
+  },
+  "model": {
+    "type": "RandomForestRegressor",
+    "n_estimators": 800,
+    "random_state": 42,
+    "other_parameters": "scikit-learn defaults"
+  },
+  "SHAP": {
+    "explainer": "TreeExplainer",
+    "background": null,
+    "feature_perturbation": "tree_path_dependent (no background data)"
+  },
+  "evaluation": "Training-data explanations; no held-out performance assessment",
+  "waterfalls": "Top 10 observed calculated scores, using the original sorting rules",
+  "filtered_rows": 420,
+  "triads": 84,
+  "plots_requested": true,
+  "analyses": {
+    "A_triad_noW": {
+      "rows": 84,
+      "features": [
+        "_S2_pos",
+        "_S3_pos",
+        "_S4_pos",
+        "_L_over_6_pos",
+        "_Riskx_geom_pos",
+        "_Detect_geo_pos"
+      ],
+      "target": "mean_score",
+      "SHAP_base_value": -0.018310325283686497,
+      "SHAP_additivity_max_abs_error": 1.199040866595169e-13
+    },
+    "B_W18": {
+      "rows": 84,
+      "features": [
+        "_S2_pos",
+        "_S3_pos",
+        "_S4_pos",
+        "_L_over_6_pos",
+        "_Riskx_geom_pos",
+        "_Detect_geo_pos"
+      ],
+      "target": "composite_score",
+      "SHAP_base_value": -0.03860517987530862,
+      "SHAP_additivity_max_abs_error": 1.438849039914203e-13
+    }
+  },
+  "PNG_count": 26
+}

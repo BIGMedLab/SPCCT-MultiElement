@@ -1,0 +1,378 @@
+{
+  "status": "PASS",
+  "comparison": "restored_original_vs_cleaned_in_the_same_environment",
+  "comparison_time_utc": "2026-10-19T18:03:40.418778+00:00",
+  "data_file": "triadW_features.xlsx",
+  "input_sha256": "dda379afa625905c3b37df1cc2fcb13ae621d5a7a68c5ef8bed3297a0299caed",
+  "cleaned_code_sha256": "8e5803bba46f824fd69de77b7e0a3b11575bf4ae50627102868188fa1ae0fe3b",
+  "reference_code_sha256": "dafbb90e56d257fee6395d811e2c731d37dadc8d3f85088f498becdf2ef69f07",
+  "verification_code_sha256": "31554bd369bc0141b41ba2854c73c63378bbcb25088e59343bfe42adcb2714e2",
+  "requirements_sha256": "e102a857462c4ae051e448a23c0da342a455cd56978c8fdc73c29073adea0515",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "matplotlib": "3.10.8",
+      "scikit-learn": "1.8.0",
+      "openpyxl": "3.1.5",
+      "shap": "0.49.1",
+      "cloudpickle": "3.1.2",
+      "contourpy": "1.3.3",
+      "cycler": "0.12.1",
+      "et-xmlfile": "2.0.0",
+      "fonttools": "4.61.1",
+      "joblib": "1.5.3",
+      "kiwisolver": "1.4.9",
+      "llvmlite": "0.50.0",
+      "numba": "0.68.0",
+      "packaging": "26.3",
+      "pillow": "12.3.0",
+      "pyparsing": "3.3.2",
+      "python-dateutil": "2.9.0.post0",
+      "pytz": "2026.5",
+      "scipy": "1.17.0",
+      "six": "1.17.0",
+      "slicer": "0.0.8",
+      "threadpoolctl": "3.6.0",
+      "tqdm": "4.70.1",
+      "typing-extensions": "4.16.0",
+      "tzdata": "2026.5"
+    }
+  },
+  "counts": {
+    "rows": 420,
+    "triads": 84,
+    "W18_rows": 84,
+    "features_per_model": 6,
+    "trees_per_model": 800,
+    "SHAP_values_per_model": {
+      "A_triad_noW": 504,
+      "B_W18": 504
+    }
+  },
+  "equivalence_rule": "exact equality; no rounding or tolerance used to pass a comparison",
+  "equivalence_checks": 34,
+  "passed_equivalence_checks": 34,
+  "max_numeric_absolute_difference": 0.0,
+  "SHAP_additivity_max_abs_error": {
+    "A_triad_noW": 1.199040866595169e-13,
+    "B_W18": 1.438849039914203e-13
+  },
+  "SHAP_additivity_absolute_tolerance": 1e-10,
+  "checks": [
+    {
+      "check": "all_scored_columns_and_original_row_order",
+      "passed": true,
+      "shape": [
+        420,
+        25
+      ],
+      "max_abs_difference": 0.0,
+      "error": null
+    },
+    {
+      "check": "direction_adjusted_features",
+      "passed": true,
+      "shape": [
+        420,
+        6
+      ],
+      "values": 2520,
+      "max_abs_difference": 0.0
+    },
+    {
+      "check": "standardized_features",
+      "passed": true,
+      "shape": [
+        420,
+        6
+      ],
+      "values": 2520,
+      "max_abs_difference": 0.0
+    },
+    {
+      "check": "composite_score_all_rows",
+      "passed": true,
+      "shape": [
+        420
+      ],
+      "values": 420,
+      "max_abs_difference": 0.0
+    },
+    {
+      "check": "row_score_100",
+      "passed": true,
+      "shape": [
+        420
+      ],
+      "values": 420,
+      "max_abs_difference": 0.0
+    },
+    {
+      "check": "W_ranking_values_and_order",
+      "passed": true,
+      "shape": [
+        420,
+        3
+      ],
+      "max_abs_difference": 0.0,
+      "error": null
+    },
+    {
+      "check": "triad_summary_all_columns_and_order",
+      "passed": true,
+      "shape": [
+        84,
+        7
+      ],
+      "max_abs_difference": 0.0,
+      "error": null
+    },
+    {
+      "check": "triad_summary_top10",
+      "passed": true,
+      "shape": [
+        10,
+        7
+      ],
+      "max_abs_difference": 0.0,
+      "error": null
+    },
+    {
+      "check": "A_triad_noW.training_features_and_order",
+      "passed": true,
+      "shape": [
+        84,
+        6
+      ],
+      "max_abs_difference": 0.0,
+      "error": null
+    },
+    {
+      "check": "A_triad_noW.training_targets_and_order",
+      "passed": true,
+      "shape": [
+        84,
+        1
+      ],
+      "max_abs_difference": 0.0,
+      "error": null
+    },
+    {
+      "check": "A_triad_noW.RF_parameters",
+      "passed": true
+    },
+    {
+      "check": "A_triad_noW.all_tree_structures_and_values",
+      "passed": true,
+      "trees": 800
+    },
+    {
+      "check": "A_triad_noW.predictions",
+      "passed": true,
+      "shape": [
+        84
+      ],
+      "values": 84,
+      "max_abs_difference": 0.0
+    },
+    {
+      "check": "A_triad_noW.feature_importance",
+      "passed": true,
+      "shape": [
+        6
+      ],
+      "values": 6,
+      "max_abs_difference": 0.0
+    },
+    {
+      "check": "A_triad_noW.FI_sorted_table",
+      "passed": true,
+      "shape": [
+        6,
+        2
+      ],
+      "max_abs_difference": 0.0,
+      "error": null
+    },
+    {
+      "check": "A_triad_noW.all_SHAP_values",
+      "passed": true,
+      "shape": [
+        84,
+        6
+      ],
+      "values": 504,
+      "max_abs_difference": 0.0
+    },
+    {
+      "check": "A_triad_noW.SHAP_base_value",
+      "passed": true,
+      "shape": [
+        1
+      ],
+      "values": 1,
+      "max_abs_difference": 0.0
+    },
+    {
+      "check": "A_triad_noW.mean_absolute_SHAP",
+      "passed": true,
+      "shape": [
+        6
+      ],
+      "values": 6,
+      "max_abs_difference": 0.0
+    },
+    {
+      "check": "A_triad_noW.waterfall_top10_ids_and_order",
+      "passed": true,
+      "shape": [
+        10
+      ],
+      "values": 10,
+      "max_abs_difference": null
+    },
+    {
+      "check": "A_triad_noW.waterfall_top10_features",
+      "passed": true,
+      "shape": [
+        10,
+        6
+      ],
+      "values": 60,
+      "max_abs_difference": 0.0
+    },
+    {
+      "check": "A_triad_noW.waterfall_top10_SHAP",
+      "passed": true,
+      "shape": [
+        10,
+        6
+      ],
+      "values": 60,
+      "max_abs_difference": 0.0
+    },
+    {
+      "check": "B_W18.training_features_and_order",
+      "passed": true,
+      "shape": [
+        84,
+        6
+      ],
+      "max_abs_difference": 0.0,
+      "error": null
+    },
+    {
+      "check": "B_W18.training_targets_and_order",
+      "passed": true,
+      "shape": [
+        84,
+        1
+      ],
+      "max_abs_difference": 0.0,
+      "error": null
+    },
+    {
+      "check": "B_W18.RF_parameters",
+      "passed": true
+    },
+    {
+      "check": "B_W18.all_tree_structures_and_values",
+      "passed": true,
+      "trees": 800
+    },
+    {
+      "check": "B_W18.predictions",
+      "passed": true,
+      "shape": [
+        84
+      ],
+      "values": 84,
+      "max_abs_difference": 0.0
+    },
+    {
+      "check": "B_W18.feature_importance",
+      "passed": true,
+      "shape": [
+        6
+      ],
+      "values": 6,
+      "max_abs_difference": 0.0
+    },
+    {
+      "check": "B_W18.FI_sorted_table",
+      "passed": true,
+      "shape": [
+        6,
+        2
+      ],
+      "max_abs_difference": 0.0,
+      "error": null
+    },
+    {
+      "check": "B_W18.all_SHAP_values",
+      "passed": true,
+      "shape": [
+        84,
+        6
+      ],
+      "values": 504,
+      "max_abs_difference": 0.0
+    },
+    {
+      "check": "B_W18.SHAP_base_value",
+      "passed": true,
+      "shape": [
+        1
+      ],
+      "values": 1,
+      "max_abs_difference": 0.0
+    },
+    {
+      "check": "B_W18.mean_absolute_SHAP",
+      "passed": true,
+      "shape": [
+        6
+      ],
+      "values": 6,
+      "max_abs_difference": 0.0
+    },
+    {
+      "check": "B_W18.waterfall_top10_ids_and_order",
+      "passed": true,
+      "shape": [
+        10
+      ],
+      "values": 10,
+      "max_abs_difference": 0.0
+    },
+    {
+      "check": "B_W18.waterfall_top10_features",
+      "passed": true,
+      "shape": [
+        10,
+        6
+      ],
+      "values": 60,
+      "max_abs_difference": 0.0
+    },
+    {
+      "check": "B_W18.waterfall_top10_SHAP",
+      "passed": true,
+      "shape": [
+        10,
+        6
+      ],
+      "values": 60,
+      "max_abs_difference": 0.0
+    }
+  ],
+  "limits": [
+    "No historical output files or historical Python environment were supplied.",
+    "Equivalence is demonstrated on the included workbook and recorded environment.",
+    "Figure pixels and workbook bytes are not required to be identical; plotted numbers are compared.",
+    "This regression check does not measure held-out predictive performance or scientific validity."
+  ]
+}
